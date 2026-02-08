@@ -34,11 +34,11 @@ function normalize(word) {
 
 /* Load all word files */
 Promise.all([
-  fetch("words_2.txt").then(r => r.text()),
-  fetch("words_3.txt").then(r => r.text()),
-  fetch("words_5.txt").then(r => r.text()),
-  fetch("words_8_dictionary.txt").then(r => r.text()),
-  fetch("words_8.txt").then(r => r.text())
+  fetch("./words_2.txt").then(r => r.text()),
+  fetch("./words_3.txt").then(r => r.text()),
+  fetch("./words_5.txt").then(r => r.text()),
+  fetch("./words_8_dictionary.txt").then(r => r.text()),
+  fetch("./words_8.txt").then(r => r.text())
 ]).then(([w2, w3, w5, w8dict, w8hema]) => {
 
   loadWords(w2, 2, words2);
@@ -175,3 +175,4 @@ function subtract(full, used) {
   used.forEach(l => temp.splice(temp.indexOf(l), 1));
   return temp;
 }
+
