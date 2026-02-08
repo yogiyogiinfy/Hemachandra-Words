@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hemachandra Word Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <h1>🔤 Hemachandra Words</h1>
+    <p class="subtitle">Enter an 8-letter word</p>
+
+    <div class="input-row">
+      <input
+        id="wordInput"
+        type="text"
+        maxlength="8"
+        placeholder="letters only"
+        autocomplete="off"
+      >
+      <button id="solveBtn" disabled>Find</button>
+    </div>
+
+    <div id="results"></div>
+  </div>
+
+  <!-- IMPORTANT: defer ensures DOM is ready -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
